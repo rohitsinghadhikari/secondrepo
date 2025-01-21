@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h1>Forms</h1>   
+ <form action="url" method="GET" autocomplete="on" enctype="application/x-www-form-urlencoded">
+    <label for="fname">First name</label>
+    <input type="  text" placeholder="name" name="" id="fname" value="rohit">
+    <label for="lname">Last name</label>
+    <input type="  text" placeholder="name" name="" id="lname">
+    <input type="button">
+    <select name="editors" id="">
+        <option value="code">code</option>
+        <option value="lime">lime</option>
+    </select>
+    <input list="edit" name="editor">
+    <datalist id="edit">
+        <option value="code">code</option>
+        <option value="lime">lime</option>
+    </datalist>
+    <label for="vol">Volume</label>
+    <input type="range" min="0" max="10" name="vol" id="vol">
+    <input type="reset" value="reset">
+    <button type="submit">Bhejo</button>
+ </form>
+</body>
+</html>

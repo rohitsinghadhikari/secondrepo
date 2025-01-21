@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            text-align: center;
+            color: #181717;
+        }
+            td, th {
+                border: 1px solid black;
+                padding: 10px;
+            }
+            tr:nth-child(even) {
+                background-color: #b9b9b9;
+            }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>email</th>
+        </tr>
+        <tr>
+            <td>dom</td>
+            <td>23</td>
+            <td>dom.com</td>
+        </tr>
+        <tr>
+            <td>mod</td>
+            <td>23</td>
+            <td>mod.com</td>
+        </tr>
+            <td>mody</td>
+            <td>23</td>
+            <td>mody.com</td>
+        </tr>
+    </table>
+    <table>
+        <colgroup>
+        <col span="2" style="background-color: cadetblue;">
+        </colgroup>
+        <tr><th colspan="2">coun</th>
+        <td>hello</td></tr>
+        <tr><th>poun</th>
+        <td>bello</td></tr>
+    </table>
+    <table>
+        <thead>
+        <tr><th>Itmes</th>
+        <th scope="col">Expenditure</th></tr> </thead>
+        <tbody>
+        <tr><th scope="row">donut</th>
+        <td>3000</td></tr>
+
+        <tr><th scope="row">coffee</th>
+        <td>5000</td></tr>
+    </tbody>
+        <tfoot><tr>
+            <th scope="row">totals</th>
+        <td>8000</td>
+        </tr></tfoot>
+    </table>
+</body>
+</html>
