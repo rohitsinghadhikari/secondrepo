@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2> Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="1.jpg" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="2.jpg" alt=""></li>
+            <li><img width="200px" id="river" src="3.jpg" alt=""></li>
+            <!-- <li><img width="200px" id="owl" src="4.jpg" alt="" onclick="alert('owl')"></li> -->
+            <!-- dont use above as it is not optimised -->
+            <li><img width="200px" id="owl" src="4.jpg" alt=""></li>
+            <li><img width="200px" id="prayer" src="5.jpg" alt=""></li>
+            <li><img width="200px" id="jump" src="6.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    // dont use this as it does not give full features, use event listener as it will give propogation
+    // document.getElementById('owl').onclick=function(){
+    //     alert("clicked")
+    // }
+
+    // timestamp, srcElement, cureentTarget, clientX, clientY, screenX, screenY
+    //  altKey, ctrlKey, keyCode, preventDefault, target, type
+
+    // document.getElementById('images').addEventListener('click', function (e){
+    //     // alert("clicked")
+    //     console.log('clicked')
+    // }, false)
+    // document.getElementById('owl').addEventListener('click', function (e){
+    //     // alert("clicked")
+    //     console.log('click')
+    //     e.stopPropagation()
+    // }, false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+
+        if (e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+        let removeIt=e.target.parentNode
+        removeIt.remove()
+        // removeIt.parentNode.removeChild(removeIt)
+        }
+    },false)
+
+</script>
+</html>
