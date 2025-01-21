@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>rohit & neha</h1>
+    <button id="start">start</button>    
+    <button id="stop">stop</button>
+</body>
+<script>
+    // const msg=function(){
+    //     console.log('nikky')
+    // }
+
+    // const text=function(){
+    // document.querySelector('h1').innerHTML="hello nikky"
+    // }
+    // const t1=setTimeout(msg,3000)
+    // const t2=setTimeout(text,1000)
+    // console.log(t1)
+    // document.querySelector('#stop').addEventListener('click', function(){
+    //     clearTimeout(t1)
+    //     console.log('stopped')
+    // })
+    
+    const date=function(str){
+        console.log(str,Date.now())
+    }
+    
+    let intId
+    
+
+    document.querySelector('#start').addEventListener('click',function(){
+        intId=setInterval(date,1000,'hi')
+    })
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(intId)
+    })
+    
+
+
+
+</script>
+</html>

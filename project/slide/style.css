@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: yellow;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+}
+
+.ribbon {
+    background-color: white;
+    color: yellow;
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.photo-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.photo-slide {
+    min-width: 100%;
+    
+    text-align: center;
+}
+
+.photo-slide img {
+    width: 100%;
+    max-width: 350px;
+    max-height: 350px;
+    border: 5px solid white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo-slide img:hover {
+    transform: scale(3.1);
+}
+
+.photo-slide p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}

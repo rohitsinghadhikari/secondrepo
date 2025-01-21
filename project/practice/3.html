@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+    .bg-black{
+        background-color: black;
+        color: #fff;
+    }</style>
+</head>
+<body class="bg-black">
+    <!-- <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div> -->
+    </div>
+</body>
+<ul class="lang">
+    <li>JS</li>
+</ul>
+<script>
+    function add (i){
+        const ad=document.createElement('li')
+        ad.innerHTML=`${i}`
+        document.querySelector('.lang').appendChild(ad)
+    }
+    add('Pyhton')
+    add("C++")
+
+    function add1(lang){
+        const ad=document.createElement('li')
+        ad.appendChild(document.createTextNode(lang))
+        document.querySelector('.lang').appendChild(ad)
+        }
+        add1('golang')
+
+        const b=document.querySelector('li:nth-child(2)')
+        b.innerHTML='Mojo'
+
+        const c=document.createElement('li')
+        c.textContent='Rojo'
+        b.replaceWith(c)
+
+    const d=document.querySelector('li:last-child')
+    // d.outerHTML='<li> Ruby </li>'
+
+    d.remove()
+</script>
+</html>
