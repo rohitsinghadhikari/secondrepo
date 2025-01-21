@@ -1,25 +1,19 @@
-const buttons = document.querySelectorAll('.button')
-const body = document.querySelector('body')
+const insert=document.getElementById('insert')
 
-buttons.forEach(function (bn) {
-    bn.addEventListener('click', function (e){
-        // console.log(e);
-        // console.log(e.target);
-        if (e.target.id === 'grey')
-        {
-            body.style.backgroundColor = e.target.id
-        }
-        if (e.target.id === 'green')
-            {
-                body.style.backgroundColor = e.target.id
-            }
-        if (e.target.id === 'blue')
-            {
-                body.style.backgroundColor = e.target.id
-            }
-        if (e.target.id === 'yellow')
-            {
-                body.style.backgroundColor = e.target.id
-            }
-    })
+window.addEventListener('keydown', (e)=>
+{
+  insert.innerHTML=`
+  <table>
+    <tr>
+      <th>Key</th>
+      <th>Keycode</th>
+      <th>Code</th>
+    </tr>
+    <tr>
+      <td>${e.key === ' ' ? 'Space' : e.key}</td>
+      <td>${e.keyCode}</td>
+      <td>${e.code}</td>
+    </tr>
+  </table>
+  `
 })
